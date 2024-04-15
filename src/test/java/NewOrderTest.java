@@ -3,21 +3,19 @@ import io.restassured.response.Response;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
 import java.io.File;
-
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 @RunWith(Parameterized.class)
-public class NewOrder {
+public class NewOrderTest {
 
     private final String inputParameter;
     private final String outputParameter;
     private final boolean isTruth;
 
-    public NewOrder(boolean isTruth, String inputParameter, String outputParameter) {
+    public NewOrderTest(String inputParameter, String outputParameter, boolean isTruth) {
         this.isTruth = isTruth;
         this.inputParameter = inputParameter;
         this.outputParameter = outputParameter;
